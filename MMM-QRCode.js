@@ -12,11 +12,12 @@
 Module.register("MMM-QRCode", {
 
 	defaults: {
-		text       : 'https://github.com/MarinescuEvghenii/MMM-QRCode',
+		text       : 'https://github.com/sham00o/MMM-QRCode',
+		title			 : 'QR Code',
 		colorDark  : "#fff",
 		colorLight : "#000",
 		imageSize  : 150,
-		showRaw    : true
+		showTitle  : true
 	},
 
 	getStyles: function() {
@@ -53,10 +54,10 @@ Module.register("MMM-QRCode", {
 
 		wrapperEl.appendChild(imageEl);
 
-		if(this.config.showRaw) {
+		if(this.config.showTitle) {
 			const textEl = document.createElement("div");
 			textEl.classList.add('qrcode__text');
-			textEl.innerHTML = this.config.text;
+			textEl.innerHTML = this.config.title;
 			wrapperEl.appendChild(textEl);
 		}
 
